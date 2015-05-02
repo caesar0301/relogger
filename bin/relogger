@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+# Runnable program to relay syslog from one or multiple sources
+# to multiple destinations.
+#
+import os
+import argparse
+from time import sleep
+
+from relogger import RLConfig
+from relogger import RLServer
+
+__author__ = "Xiaming Chen"
+__email__ = "chenxm35@gmail.com"
+
+## parse cli parameters
+parser = argparse.ArgumentParser(description='Relayed syslog pipeline.')
+parser.add_argument('-s', dest='source', type=str, default='localhost', help='a string of source hosts')
+parser.add_argument('-d', dest='dest', type=str, help='a string of destination hosts')
+parser.add_argument('-F', dest='config', type=str, help='a config file about hosts')
+parser.add_argument('-r', dest='ifile', type=str, help='an offline log file to read')
+parser.add_argument('-w', dest='ofile', type=str, help='an offline file to write logs')
+parser.add_argument('-C', dest='maxnum', type=int, help='maximum number of logs to send')
+
+## check parameters and parse configuration
+args = parser.parse_args()
+rlconfig = RLConfig(config=args.config) if args.config else \
+    RLConfig(args.source, args.ifile, args.dest, args.ofile)
+
+## check root permission
+if rlconfig.has_source_socket():
+    euid = os.geteuid()
+    if euid != 0:
+        raise EnvironmentError("Permission Denied to read network interfaces.")
+        sys.exit(-1)
+
+flowtable = rlconfig.flowtable
+server = RLServer(flowtable)
+server.start()
+
+print("relogger running ...")
+while True:
+    sleep(1)

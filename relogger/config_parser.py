@@ -183,3 +183,11 @@ class RLConfig(object):
         """ get a list of flow table for individual source-dest pairs
         """
         return self.flow_table
+
+    def has_source_socket(self):
+        hosts = [ i for i in self.flowtable if not i.startswith('file://') ]
+        return len(hosts) > 0
+
+    def has_source_file(self):
+        files = [ i for i in self.flowtable if i.startswith('file://') ]
+        return len(files) > 0

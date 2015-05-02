@@ -300,6 +300,9 @@ class Syslog(object):
         """Remove hostname from the list of hosts that will receive packets."""
         del self._hostnames[hostname]
 
+    def host_number(self):
+        return len(self._hostnames)
+
     def _send_packet_to_hosts(self, packet):
         for hostname in self._hostnames:
             host = hostname

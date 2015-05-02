@@ -1,0 +1,5 @@
+[test1]
+src.file = test/hzlogs.dat
+src.port = 514,30514
+dst.host = localhost:666,localhost:30666
+dst.file = test/output.txt

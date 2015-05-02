@@ -1,0 +1,7 @@
+include AUTHORS
+include README.md
+include LICENSE
+include MANIFEST.in
+include *.py
+recursive-include bin *
+recursive-include relogger *.py

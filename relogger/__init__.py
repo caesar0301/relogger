@@ -1,4 +1,5 @@
-__version__ = '0.1.1'
+__version__ = '1.0'
 
-from config_parser import RLConfig
 from syslog import Syslog
+from config_parser import RLConfig
+from relogger import RLServer
