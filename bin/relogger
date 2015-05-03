@@ -2,10 +2,21 @@
 # Runnable program to relay syslog from one or multiple sources
 # to multiple destinations.
 #
+# ________                             ____  ___
+# \______ \ _____ _______  ____   ____ \   \/  /
+#  |    |  \\__  \\_  __ \/  _ \ /    \ \     / 
+#  |    `   \/ __ \|  | \(  <_> )   |  \/     \ 
+# /_______  (____  /__|   \____/|___|  /___/\  \
+#         \/     \/                  \/      \_/
+#
+# Relayed syslog pipeline, version relogger.__version__
+# Copyright 2015, DaronX <http://www.daronx.com>
+#
 import os, sys
 import argparse
 from time import sleep
 
+from relogger import __version__
 from relogger import RLConfig
 from relogger import RLServer
 
@@ -13,7 +24,7 @@ __author__ = "Xiaming Chen"
 __email__ = "chenxm35@gmail.com"
 
 ## parse cli parameters
-parser = argparse.ArgumentParser(description='Relayed syslog pipeline.')
+parser = argparse.ArgumentParser(description='Relayed syslog pipeline, version %s' % __version__)
 parser.add_argument('-s', dest='source', type=str, help='a string of source hosts')
 parser.add_argument('-d', dest='dest', type=str, help='a string of destination hosts')
 parser.add_argument('-F', dest='config', type=str, help='a config file about hosts')
