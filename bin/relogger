@@ -14,7 +14,7 @@ __email__ = "chenxm35@gmail.com"
 
 ## parse cli parameters
 parser = argparse.ArgumentParser(description='Relayed syslog pipeline.')
-parser.add_argument('-s', dest='source', type=str, default='localhost', help='a string of source hosts')
+parser.add_argument('-s', dest='source', type=str, help='a string of source hosts')
 parser.add_argument('-d', dest='dest', type=str, help='a string of destination hosts')
 parser.add_argument('-F', dest='config', type=str, help='a config file about hosts')
 parser.add_argument('-r', dest='ifile', type=str, help='an offline log file to read')
@@ -22,7 +22,7 @@ parser.add_argument('-w', dest='ofile', type=str, help='an offline file to write
 
 ## check parameters and parse configuration
 args = parser.parse_args()
-if not (args.config and args.source and args.ifile):
+if not (args.config or args.source or args.ifile):
 	parser.print_help()
 	sys.exit(-1)
 
