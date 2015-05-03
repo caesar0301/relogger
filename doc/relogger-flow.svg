@@ -13,8 +13,11 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="relogger-flow.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="relogger-flow.svg"
+   inkscape:export-filename="/Users/chenxm/Jamin/workspace/relogger/doc/relogger-flow.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <marker
@@ -87,14 +90,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="457.29581"
+     inkscape:cx="294.15617"
      inkscape:cy="625.2063"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3054"
      showgrid="false"
-     inkscape:window-width="1276"
-     inkscape:window-height="755"
-     inkscape:window-x="4"
+     inkscape:window-width="1440"
+     inkscape:window-height="812"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
@@ -105,7 +108,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -612,14 +615,14 @@
          sodipodi:linespacing="125%"
          id="text3043-05-5-8"
          y="421.07709"
-         x="279.2547"
-         style="font-size:12.01989746px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="285.2547"
+         style="font-style:normal;font-weight:normal;font-size:12.01989746px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Sans;-inkscape-font-specification:Sans;text-align:start;writing-mode:lr-tb;text-anchor:start"
            y="421.07709"
-           x="279.2547"
+           x="285.2547"
            id="tspan3045-42-7-1"
-           sodipodi:role="line">Resender</tspan></text>
+           sodipodi:role="line">Sender</tspan></text>
       <g
          transform="matrix(0.78961783,0,0,0.78961783,97.464474,15.662829)"
          id="g4274">

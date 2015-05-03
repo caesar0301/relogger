@@ -2,7 +2,7 @@
 # Runnable program to relay syslog from one or multiple sources
 # to multiple destinations.
 #
-import os
+import os, sys
 import argparse
 from time import sleep
 
@@ -19,10 +19,13 @@ parser.add_argument('-d', dest='dest', type=str, help='a string of destination h
 parser.add_argument('-F', dest='config', type=str, help='a config file about hosts')
 parser.add_argument('-r', dest='ifile', type=str, help='an offline log file to read')
 parser.add_argument('-w', dest='ofile', type=str, help='an offline file to write logs')
-parser.add_argument('-C', dest='maxnum', type=int, help='maximum number of logs to send')
 
 ## check parameters and parse configuration
 args = parser.parse_args()
+if not (args.config and args.source and args.ifile):
+	parser.print_help()
+	sys.exit(-1)
+
 rlconfig = RLConfig(config=args.config) if args.config else \
     RLConfig(args.source, args.ifile, args.dest, args.ofile)
 
