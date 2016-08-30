@@ -10,6 +10,12 @@ personalized scenarios.
 * Light-weight relay focusing on syslog
 * Flexible configuration from/to sockets and files
 
+# Related projects
+
+* [Fluentd](http://www.fluentd.org/): an open source data collector for unified logging layer
+* [Apache Flume](http://flume.apache.org/): service to manage large amount of log data
+* [Apache Kafka](http://kafka.apache.org/): distributed publish-subscribe messaging system
+
 # Install
 
     $ sudo pip install -U relogger
